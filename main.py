@@ -23,7 +23,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL = tf.keras.models.load_model('Model-CPU')
+MODEL = tf.keras.models.load_model('GPUModel')
 CLASS_NAMES = ["Potato___Early_blight", "Potato___healthy", "Potato___Late_blight"]
 
 @app.get("/ping")
@@ -51,4 +51,4 @@ async def predict(
     }
 
 if __name__ == "__main__":
-    uvicorn.run(app, host='localhost', port=8000)
+    uvicorn.run(app, host='0.0.0.0', port=8000)
