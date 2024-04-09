@@ -1,1 +1,1 @@
-web: unicorn -w 4 -k unicorn.workers.UnicornWorker myapi:app
+web: unicorn -w 4 myapi:app
