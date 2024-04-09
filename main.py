@@ -15,6 +15,8 @@ origins = [
     "http://localhost:3000",
 ]
 
+# https://cnn-model-api-deployment-ac2b40fcf26d.herokuapp.com/
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
