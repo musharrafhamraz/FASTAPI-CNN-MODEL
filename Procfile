@@ -1,1 +1,1 @@
-web: unicorn -w 4 myapi:app
+web: uvicorn myapi:app --host=0.0.0.0 --port=${PORT:-5000}
